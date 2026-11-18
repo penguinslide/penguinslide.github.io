@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>すべりだせ！ペンギン ｜ 氷をすべる脱出パズル</title>
+<meta name="description" content="氷の上をすべるペンギンを、岩にぶつけて止めながら出口へ。穴とはしご、魚と岩の仕掛けもある脱出パズル。">
+<link rel="icon" href="img/icon.png">
+<style>
+  :root { --ink:#1d3a52; --muted:#4f6a80; --ice:#eaf7fd; --ice2:#d6effa; --wall:#9fd3ec; --card:#fff; --accent:#ffc83d; --exit:#3ccf8e; }
+  * { box-sizing:border-box; }
+  html, body { overflow-x:hidden; }
+  body { margin:0; color:var(--ink); background:var(--ice); line-height:1.8; font-size:16px;
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; }
+  header { background:var(--ice2); border-bottom:3px solid var(--ink); padding:40px 16px 32px; text-align:center; position:relative; }
+  header::before { content:""; position:absolute; inset:0 0 auto 0; height:28px;
+    background:repeating-linear-gradient(90deg, transparent 0 14px, #fff 14px 15px), linear-gradient(#fff,transparent); opacity:.7; }
+  .hero { max-width:760px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:12px; }
+  .hero img.icon { width:112px; height:112px; border-radius:26px; border:3px solid var(--ink); box-shadow:0 5px 0 rgba(29,58,82,.2); }
+  h1 { margin:0; font-size:2.2rem; letter-spacing:.06em; }
+  .lead { margin:0; font-size:1.1rem; }
+  .free { color:var(--muted); font-size:.9rem; margin:0; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  .card { background:var(--card); border:3px solid var(--ink); border-radius:18px; padding:22px 20px; margin:0 0 24px; box-shadow:0 5px 0 rgba(29,58,82,.18); }
+  h2 { margin:0 0 8px; font-size:1.3rem; }
+  .rules { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-top:14px; }
+  .rule { background:var(--ice); border:2px solid var(--ink); border-radius:14px; padding:14px; text-align:center; }
+  .rule img { width:72px; height:72px; }
+  .rule b { display:block; font-size:1.05rem; }
+  .rule p { margin:4px 0 0; font-size:.92rem; color:var(--muted); }
+  .penguins { display:flex; justify-content:center; gap:8px; margin:8px 0 0; }
+  .penguins img { width:88px; height:88px; }
+  footer { text-align:center; color:var(--muted); font-size:.9rem; padding:0 16px 40px; }
+  footer a { color:var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <div class="hero">
+    <img class="icon" src="img/icon.png" alt="すべりだせ！ペンギンのアイコン">
+    <h1>すべりだせ！ペンギン</h1>
+    <p class="lead">すべって、ぶつかって、氷の洞窟から脱出！</p>
+    <p class="free">iPhone 向け・全1000ステージ・無料で遊べます（広告が表示されます）</p>
+  </div>
+</header>
+<main>
+  <section class="card">
+    <h2>ルールはかんたん</h2>
+    <p>ペンギンは氷の上をすべりはじめると、岩や壁にぶつかるまで止まれません。岩をうまく使って、緑の出口からぬけ出そう。</p>
+    <div class="rules">
+      <div class="rule"><img src="img/rock.png" alt=""><b>岩で止まる</b><p>すべったら、ぶつかるまで止まらない。</p></div>
+      <div class="rule"><img src="img/hole.png" alt=""><b>穴とはしご</b><p>穴に入ると下の階へ。はしごで上へ戻れる。</p></div>
+      <div class="rule"><img src="img/fish.png" alt=""><b>魚で岩をこわす</b><p>魚を食べると、次にぶつかった岩をくちばしでこわせる。</p></div>
+      <div class="rule"><img src="img/exit_plate.png" alt=""><b>出口へ脱出</b><p>最短の手数でクリアすると ★3つ。</p></div>
+    </div>
+    <p>ほかにも、通ると割れて水になる氷、刺さるとアウトのつらら、3階建ての洞窟などが、少しずつ登場します。集めたコインで、ペンギンの着せかえも楽しめます。</p>
+    <div class="penguins">
+      <img src="img/penguin_idle.png" alt="">
+      <img src="img/penguin_slide_right.png" alt="">
+      <img src="img/penguin_cheer.png" alt="">
+    </div>
+  </section>
+  <section class="card">
+    <h2>お問い合わせ</h2>
+    <p>本アプリについてのお問い合わせは <a href="mailto:penguinnonawabari@gmail.com">penguinnonawabari@gmail.com</a> までお願いします。</p>
+    <p><a href="privacy-policy.html">プライバシーポリシー</a></p>
+  </section>
+</main>
+<footer>© 2026 すべりだせ！ペンギン ・ <a href="privacy-policy.html">プライバシーポリシー</a> ・ <a href="en/privacy-policy.html">Privacy Policy (English)</a></footer>
+</body>
+</html>
