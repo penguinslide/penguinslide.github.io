@@ -1,5 +1,16 @@
 {
   "version": 1,
   "stageCount": 1000,
-  "notices": []
+  "notices": [
+    {
+      "id": "launch-gift-2026-11",
+      "date": "2026-11-19",
+      "title": { "ja": "配信記念プレゼント！", "en": "Launch Gift!" },
+      "body": {
+        "ja": "「すべりだせ！ペンギン」を遊んでくれてありがとう！\n配信を記念して、コイン1000枚をプレゼントします。\nガチャで新しい着せかえを集めよう！",
+        "en": "Thanks for playing Slide Out, Penguin!\nTo celebrate the launch, here are 1,000 coins.\nUse them to collect new outfits!"
+      },
+      "gift": { "coins": 1000 }
+    }
+  ]
 }
