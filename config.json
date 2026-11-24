@@ -3,14 +3,45 @@
   "stageCount": 1000,
   "notices": [
     {
+      "id": "promo-flickchanbara-2026-11",
+      "date": "2026-11-24",
+      "title": {
+        "ja": "新しいゲーム「フリックチャンバラ」",
+        "en": "New Game: Flick Chanbara"
+      },
+      "body": {
+        "ja": "いつも遊んでくれてありがとう！\n同じ作者の新しいゲーム「フリックチャンバラ」の配信が始まりました⚔️\n\n相手と正面から向き合い、フリックで斬る、フリックで受ける。反射神経のチャンバラです。\nCPUとの勝負や巻藁斬りのほか、近くの人やGame Centerで対戦もできます。剣士や武器を集めるガチャもあります。\n\n無料で遊べるので、よかったらのぞいてみてね！",
+        "en": "Thanks for playing!\nOur new game, \"Flick Chanbara\", is out now ⚔️\n\nFace your rival head-on: flick to slash, flick to block. A sword duel of quick reflexes.\nFight the CPU, slice straw targets, or duel friends nearby or through Game Center — and collect swordsmen and weapons from the gacha.\n\nIt's free to play, so give it a look!"
+      },
+      "url": "https://apps.apple.com/jp/app/id6836707082"
+    },
+    {
+      "id": "promo-nawabari-2026-11",
+      "date": "2026-11-24",
+      "title": {
+        "ja": "「ペンギンのなわばり」もあります",
+        "en": "Also Try: Penguin Territory"
+      },
+      "body": {
+        "ja": "いつも遊んでくれてありがとう！\n同じ作者のパズルゲーム「ペンギンのなわばり」も配信中です🐧\n\n六角の盤に、ペンギンたちのなわばりを決めていくパズル。同じ色に1羽、まっすぐ並べない、となり合わない、の3つのきまりで解いていきます。\n着せかえやガチャ、毎日のミッションもあります。\n\n無料で遊べるので、よかったらのぞいてみてね！",
+        "en": "Thanks for playing!\nOur puzzle game \"Penguin Territory\" is also available on the Japanese App Store 🐧\n\nPlace penguins on a hexagonal board so each one gets its own territory — one per color, no two in a line, and no penguins touching.\nThere's also dress-up, a gacha and daily missions.\n\nIt's free to play, so give it a look!"
+      },
+      "url": "https://apps.apple.com/jp/app/id6834334474"
+    },
+    {
       "id": "launch-gift-2026-11",
       "date": "2026-11-19",
-      "title": { "ja": "配信記念プレゼント！", "en": "Launch Gift!" },
+      "title": {
+        "ja": "配信記念プレゼント！",
+        "en": "Launch Gift!"
+      },
       "body": {
         "ja": "「すべりだせ！ペンギン」を遊んでくれてありがとう！\n配信を記念して、コイン1000枚をプレゼントします。\nガチャで新しい着せかえを集めよう！",
         "en": "Thanks for playing Slide Out, Penguin!\nTo celebrate the launch, here are 1,000 coins.\nUse them to collect new outfits!"
       },
-      "gift": { "coins": 1000 }
+      "gift": {
+        "coins": 1000
+      }
     }
   ]
 }
