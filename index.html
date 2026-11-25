@@ -4,68 +4,91 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>すべりだせ！ペンギン ｜ 氷をすべる脱出パズル</title>
-<meta name="description" content="氷の上をすべるペンギンを、岩にぶつけて止めながら出口へ。穴とはしご、魚と岩の仕掛けもある脱出パズル。">
-<link rel="icon" href="img/icon.png">
-<style>
-  :root { --ink:#1d3a52; --muted:#4f6a80; --ice:#eaf7fd; --ice2:#d6effa; --wall:#9fd3ec; --card:#fff; --accent:#ffc83d; --exit:#3ccf8e; }
-  * { box-sizing:border-box; }
-  html, body { overflow-x:hidden; }
-  body { margin:0; color:var(--ink); background:var(--ice); line-height:1.8; font-size:16px;
-    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; }
-  header { background:var(--ice2); border-bottom:3px solid var(--ink); padding:40px 16px 32px; text-align:center; position:relative; }
-  header::before { content:""; position:absolute; inset:0 0 auto 0; height:28px;
-    background:repeating-linear-gradient(90deg, transparent 0 14px, #fff 14px 15px), linear-gradient(#fff,transparent); opacity:.7; }
-  .hero { max-width:760px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:12px; }
-  .hero img.icon { width:112px; height:112px; border-radius:26px; border:3px solid var(--ink); box-shadow:0 5px 0 rgba(29,58,82,.2); }
-  h1 { margin:0; font-size:2.2rem; letter-spacing:.06em; }
-  .lead { margin:0; font-size:1.1rem; }
-  .free { color:var(--muted); font-size:.9rem; margin:0; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  .card { background:var(--card); border:3px solid var(--ink); border-radius:18px; padding:22px 20px; margin:0 0 24px; box-shadow:0 5px 0 rgba(29,58,82,.18); }
-  h2 { margin:0 0 8px; font-size:1.3rem; }
-  .rules { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-top:14px; }
-  .rule { background:var(--ice); border:2px solid var(--ink); border-radius:14px; padding:14px; text-align:center; }
-  .rule img { width:72px; height:72px; }
-  .rule b { display:block; font-size:1.05rem; }
-  .rule p { margin:4px 0 0; font-size:.92rem; color:var(--muted); }
-  .penguins { display:flex; justify-content:center; gap:8px; margin:8px 0 0; }
-  .penguins img { width:88px; height:88px; }
-  footer { text-align:center; color:var(--muted); font-size:.9rem; padding:0 16px 40px; }
-  footer a { color:var(--ink); }
-</style>
+<meta name="description" content="ペンギンは氷の上をすべり出したら、岩や壁にぶつかるまで止まれません。どの順にすべれば出口にたどり着ける？">
+<meta name="theme-color" content="#EAF7FD">
+<link rel="icon" href="lp/icon.png">
+<link rel="apple-touch-icon" href="lp/icon.png">
+<link rel="alternate" hreflang="ja" href="https://penguinslide.github.io/">
+<link rel="alternate" hreflang="en" href="https://penguinslide.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://penguinslide.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="すべりだせ！ペンギン">
+<meta property="og:url" content="https://penguinslide.github.io/">
+<meta property="og:title" content="すべりだせ！ペンギン">
+<meta property="og:description" content="ペンギンは氷の上をすべり出したら、岩や壁にぶつかるまで止まれません。どの順にすべれば出口にたどり着ける？">
+<meta property="og:image" content="https://penguinslide.github.io/lp/ogp.png">
+<meta property="og:image:alt" content="すべりだせ！ペンギン">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@11amawip">
+<link rel="stylesheet" href="lp.css">
 </head>
-<body>
-<header>
-  <div class="hero">
-    <img class="icon" src="img/icon.png" alt="すべりだせ！ペンギンのアイコン">
-    <h1>すべりだせ！ペンギン</h1>
-    <p class="lead">すべって、ぶつかって、氷の洞窟から脱出！</p>
-    <p class="free">iPhone 向け・全1000ステージ・無料で遊べます（広告が表示されます）</p>
-  </div>
+<body class="app--suberidase">
+
+<header class="top">
+  <a href="./">すべりだせ！ペンギン</a>
+  <nav><a href="#more">ほかのゲーム</a><a href="en/" hreflang="en" lang="en">EN</a></nav>
 </header>
-<main>
-  <section class="card">
-    <h2>ルールはかんたん</h2>
-    <p>ペンギンは氷の上をすべりはじめると、岩や壁にぶつかるまで止まれません。岩をうまく使って、緑の出口からぬけ出そう。</p>
-    <div class="rules">
-      <div class="rule"><img src="img/rock.png" alt=""><b>岩で止まる</b><p>すべったら、ぶつかるまで止まらない。</p></div>
-      <div class="rule"><img src="img/hole.png" alt=""><b>穴とはしご</b><p>穴に入ると下の階へ。はしごで上へ戻れる。</p></div>
-      <div class="rule"><img src="img/fish.png" alt=""><b>魚で岩をこわす</b><p>魚を食べると、次にぶつかった岩をくちばしでこわせる。</p></div>
-      <div class="rule"><img src="img/exit_plate.png" alt=""><b>出口へ脱出</b><p>最短の手数でクリアすると ★3つ。</p></div>
+
+<section class="hero">
+  <div class="motif" aria-hidden="true"><div class="slider"><img class="peng" src="img/penguin_slide_right.png" alt=""><img class="rock" src="img/rock.png" alt=""></div></div>
+  <div class="wrap hero__grid">
+    <div>
+      <div class="id"><img src="lp/icon.png" alt="" width="256" height="256"><div><b>すべりだせ！ペンギン</b><span>氷をすべる脱出パズル</span></div></div>
+      <h1>止まれるのは、<br><em>岩にぶつかった<br>時だけ。</em></h1>
+      <p class="lead">ペンギンは氷の上をすべり出したら、岩や壁にぶつかるまで止まれません。どの順にすべれば出口にたどり着ける？</p>
+      <a class="store" href="https://apps.apple.com/app/id6836212165" rel="noopener">App Store で無料 <span aria-hidden="true">→</span></a>
+      <p class="note">iPhone・無料（広告あり。「広告を消す」で消せます）</p>
     </div>
-    <p>ほかにも、通ると割れて水になる氷、刺さるとアウトのつらら、3階建ての洞窟などが、少しずつ登場します。集めたコインで、ペンギンの着せかえも楽しめます。</p>
-    <div class="penguins">
-      <img src="img/penguin_idle.png" alt="">
-      <img src="img/penguin_slide_right.png" alt="">
-      <img src="img/penguin_cheer.png" alt="">
+    <div class="phones">
+      <div class="phone phone--a"><img src="lp/2-board.jpg" alt="" width="540" height="1174"></div>
+      <div class="phone phone--b"><img src="lp/3-floors.jpg" alt="" width="540" height="1174"></div>
     </div>
-  </section>
-  <section class="card">
-    <h2>お問い合わせ</h2>
-    <p>本アプリについてのお問い合わせは <a href="mailto:penguinnonawabari@gmail.com">penguinnonawabari@gmail.com</a> までお願いします。</p>
-    <p><a href="privacy-policy.html">プライバシーポリシー</a></p>
-  </section>
-</main>
-<footer>© 2026 すべりだせ！ペンギン ・ <a href="privacy-policy.html">プライバシーポリシー</a> ・ <a href="en/privacy-policy.html">Privacy Policy (English)</a></footer>
+  </div>
+</section>
+
+<div class="stats" aria-label="数字で見る"><ul class="wrap"><li><b>1000</b><span>ステージ</span></li><li><b>毎日</b><span>今日の1問</span></li><li><b>170+</b><span>着せかえ</span></li></ul></div>
+
+<section class="feats">
+  <div class="wrap">
+    <span class="kicker">HOW TO PLAY</span>
+    <h2>ルールはかんたん、でも奥が深い。</h2>
+    <div class="feats__grid"><article class="feat"><img class="art" src="img/rock.png" alt="" width="68" height="68"><h3>岩で止まる</h3><p>スワイプした向きにすべって、ぶつかったところで止まる。</p></article><article class="feat"><img class="art" src="img/hole.png" alt="" width="68" height="68"><h3>穴とはしご</h3><p>穴に入ると下の階へ。2階建て・3階建ての盤面も。</p></article><article class="feat"><img class="art" src="img/fish.png" alt="" width="68" height="68"><h3>魚で岩をこわす</h3><p>魚を食べると、次にぶつかった岩をくちばしでこわせる。</p></article><article class="feat"><img class="art" src="img/exit_plate.png" alt="" width="68" height="68"><h3>最短で★3つ</h3><p>最短の手数でクリアすると星3つ。おにモード・時間制限モードも。</p></article></div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap"><span class="kicker">SCREENS</span><h2>画面を見る</h2><p class="hint">← 横にすべらせて見られます →</p></div>
+  <div class="strip"><figure><img src="lp/1-home.jpg" alt="ホーム" loading="lazy" width="540" height="1174"><figcaption>ホーム</figcaption></figure><figure><img src="lp/2-board.jpg" alt="盤面" loading="lazy" width="540" height="1174"><figcaption>盤面</figcaption></figure><figure><img src="lp/3-floors.jpg" alt="2階建て" loading="lazy" width="540" height="1174"><figcaption>2階建て</figcaption></figure><figure><img src="lp/4-clear.jpg" alt="クリア" loading="lazy" width="540" height="1174"><figcaption>クリア</figcaption></figure><figure><img src="lp/5-daily.jpg" alt="今日の1問" loading="lazy" width="540" height="1174"><figcaption>今日の1問</figcaption></figure><figure><img src="lp/6-gacha.jpg" alt="着せかえガチャ" loading="lazy" width="540" height="1174"><figcaption>着せかえガチャ</figcaption></figure></div>
+</section>
+
+<section class="again">
+  <div class="wrap">
+    <h2>さあ、<em>すべりだせ！</em></h2>
+    <p>はじめは小さな盤面から。最初のステージで遊び方を案内します。</p>
+    <a class="store" href="https://apps.apple.com/app/id6836212165" rel="noopener">App Store で無料 <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="more" id="more">
+  <div class="wrap">
+    <span class="kicker">MORE GAMES</span>
+    <h2>同じ作者のゲーム</h2>
+    <p>どれも無料。遊び比べてみてください。</p>
+    <div class="more__grid"><a class="game" href="https://apps.apple.com/app/id6834334474" rel="noopener"><img src="lp/game-nawabari.png" alt="" width="120" height="120" loading="lazy"><div><b>ペンギンのなわばり</b><span>六角マスの推理パズル</span></div></a><a class="game" href="https://apps.apple.com/app/id6836707082" rel="noopener"><img src="lp/game-chanbara.png" alt="" width="120" height="120" loading="lazy"><div><b>フリックチャンバラ</b><span>フリックで斬るチャンバラ</span></div></a><div class="game"><img src="lp/game-kirikae.png" alt="" width="120" height="120" loading="lazy"><div><b>切り替え特急</b><span>分岐を切り替えて走る電車ゲーム · もうすぐ配信（審査中）</span></div></div><a class="game game--hub" href="https://11amawip.github.io/"><img src="lp/avatar.png" alt="" width="120" height="120" loading="lazy"><div><b>ぜんぶ見る →</b><span>開発中のりゃまさんのページへ</span></div></a></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <h2>お問い合わせ</h2>
+      <p>不具合のご報告やご質問は <a href="mailto:penguinnonawabari@gmail.com">penguinnonawabari@gmail.com</a> までお願いします。</p>
+      <p><a href="privacy-policy.html">プライバシーポリシー</a>（<a href="en/privacy-policy.html" lang="en">English</a>）</p>
+    </div>
+    <a class="by" href="https://11amawip.github.io/"><img src="lp/avatar.png" alt="" width="120" height="120" loading="lazy"><p>つくった人: 開発中のりゃまさん</p></a>
+  </div>
+  <div class="wrap"><p class="note">© 2026 すべりだせ！ペンギン</p></div>
+</footer>
+
 </body>
 </html>
